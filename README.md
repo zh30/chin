@@ -1,2 +1,2 @@
-# wood-ui
+# Chin
 React UI library
