@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   files: [
     "./src/components/**/*.{md,markdown,mdx}",
