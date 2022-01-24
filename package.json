@@ -4,7 +4,8 @@
   "private": true,
   "typings": "lib/index.d.ts",
   "files": [
-    "src/",
+    "packages/",
+    "components/",
     "doczrc.js",
     "tsconfig.json",
     "package.json"
@@ -15,12 +16,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf ./dist",
-    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "build": "yarn clean && yarn build-ts && yarn build-css",
-    "build:types": "tsc -p tsconfig.build.json && cpr lib esm",
     "docz:dev": "docz dev",
-    "docz:build": "rimraf docsite && docz build",
-    "docz:serve": "yarn docz:build && docz serve"
+    "docz:build": "rimraf gh-dist && docz build",
+    "docz:serve": "pnpm docz:build && docz serve",
+    "preinstall": "npx only-allow pnpm"
   },
   "eslintConfig": {
     "extends": [
@@ -44,26 +43,22 @@
     "@changesets/cli": "^2.19.0",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.133",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "node-sass": "^5.0.0",
     "prettier": "2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
     "@types/node": "^12.20.42",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
     "docz": "^2.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "typescript": "^4.5.5",
     "web-vitals": "^1.1.2"
   },
