@@ -1,0 +1,26 @@
+{
+  "name": "@chinjs/hooks",
+  "version": "0.0.1",
+  "description": "Chin React hooks",
+  "main": "index.js",
+  "module": "dist/hooks.esm.js",
+  "types": "dist/hooks.d.ts",
+  "buildOptions": {
+    "formats": [
+      "esm",
+      "umd",
+      "cjs",
+      "global"
+    ],
+    "entry": "src/index.ts"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
