@@ -1,1 +1,1 @@
-## Chin UI
+## Chinjs UI

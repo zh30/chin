@@ -1,1 +1,1 @@
-## Chin hooks
+## Chinjs hooks
